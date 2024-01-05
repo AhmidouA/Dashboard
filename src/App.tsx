@@ -3,6 +3,7 @@ import { CssBaseline, ThemeProvider } from '@mui/material';
 
 /* Components */
 import { ColorModeContext, useMode } from '@/hooks/theme';
+import Topbar from '@/scenes/global/Topbar';
 
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
         {/* Ameliore le Css et l'adpate a tous els navigateur */}
         <div className='app'>
           <main className='content'>
-            Hello World
+            <Topbar />
           </main>
         </div>
       </ThemeProvider>

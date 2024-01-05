@@ -3,7 +3,7 @@ import { createContext, useState, useMemo } from 'react';
 import { createTheme } from '@mui/material/styles'
 
 /* Components */
-import { ColorModeContextType } from '@/shared/interfaces';
+import { ColorModeContextType } from '@/interfaces/interface';
 import { ColorModeType } from '@/shared/types';
 
 
@@ -173,30 +173,30 @@ export const themeSetting = (mode: ColorModeType) => {
         },
         typography: {
             fontFamily: ["Source Sans 3", "sans-serif"].join(","),
-            fontSize: 0.8,
+            fontSize: 12,
             h1: {
                 fontFamily: ["Source Sans 3", "sans-serif"].join(","),
-                fontSize: 2.3
+                fontSize: 40
             },
             h2: {
                 fontFamily: ["Source Sans 3", "sans-serif"].join(","),
-                fontSize: 2
+                fontSize: 32
             },
             h3: {
                 fontFamily: ["Source Sans 3", "sans-serif"].join(","),
-                fontSize: 1.5
+                fontSize: 24
             },
             h4: {
                 fontFamily: ["Source Sans 3", "sans-serif"].join(","),
-                fontSize: 1.2
+                fontSize: 20
             },
             h5: {
                 fontFamily: ["Source Sans 3", "sans-serif"].join(","),
-                fontSize: 1
+                fontSize: 16
             },
             h6: {
                 fontFamily: ["Source Sans 3", "sans-serif"].join(","),
-                fontSize: 0.9
+                fontSize: 14
             },
         },
     };
