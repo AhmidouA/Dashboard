@@ -11,6 +11,17 @@ import SearchIcon from "@mui/icons-material/Search";
 
 /* Components */
 import { ColorModeContext, tokens } from "@/hooks/theme";
+// import Sidebar from "./Sidebar";
+// import Dashboard from "./pages/dashboard";
+// import Invoices from "./pages/invoices";
+// import Contacts from "./pages/contacts";
+// import Bar from "./pages/bar";
+// import Form from "./pages/form";
+// import Line from "./pages/line";
+// import Pie from "./pages/pie";
+// import FAQ from "./pages/faq";
+// import Geography from "./pages/geography";
+// import Calander from "./pages/calender";
 
 
 const Topbar = () => {
