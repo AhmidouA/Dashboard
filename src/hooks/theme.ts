@@ -225,3 +225,4 @@ export const ColorModeContext = createContext<ColorModeContextType>({
     // Retourne le thème actuel et la fonction de basculement du mode couleur
     return [theme, colorMode];
   };
+  
