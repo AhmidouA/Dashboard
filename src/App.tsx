@@ -1,35 +1,33 @@
 /* React & NPM */
-import { CssBaseline, ThemeProvider } from '@mui/material';
+import { CssBaseline, ThemeProvider, Box, Theme } from '@mui/material';
 import { Routes, Route } from 'react-router-dom';
 
 /* Components */
 import { ColorModeContext, useMode } from '@/hooks/theme';
-import Topbar from '@/pages/global/Topbar';
-import Sidebar from '@/pages/global/Sidebar';
-import Dashboard from './pages/dashboard';
-
+import Topbar from '@/hooks/Topbar';
+import Sidebar from '@/hooks/Sidebar';
+import Dashboard from '@/pages/Dashboard';
+import Team from '@/pages/Team'
 
 
 function App() {
 
-  const [ theme, colorMode ] = useMode();
-
+  const [theme, colorMode] = useMode();
 
   return (
    
-    <ColorModeContext.Provider value={{ ...colorMode, toggleColorMode: () => {} }}>
-    {/* Cette partie utilise l'opérateur de spread (...) pour créer une copie de l'objet colorMode. Ensuite, une nouvelle propriété toggleColorMode est ajoutée à cet objet, et elle est initialisée avec une fonction vide (() => {}). */}     
-      <ThemeProvider theme={theme as Partial<{ toggleColorMode: () => void; }>}>
-        {/* Utilisez Partial pour indiquer que le thème peut être partiel ou complet */}
+    <ColorModeContext.Provider value={colorMode}>
+    <ThemeProvider theme={theme as Partial<Theme>}>
         <CssBaseline />
         {/* Ameliore le Css et l'adpate a tous els navigateur */}
-        <div className='app'>
+        <Box sx={{ display: 'flex' }}>
           <Sidebar />
-          <main className='content'>
+          <Box sx={{ flexGrow: 1 }}>
             <Topbar />
-            <Routes>
+              <main className='content'>
+              <Routes>
               <Route path='/' element={<Dashboard />} />
-              {/* <Route path='/team' element={<Team />} /> */}
+              <Route path='/team' element={<Team />} />
               {/* <Route path='/contacts' element={<Contact />} /> */}
               {/* <Route path='/invoices' element={<Invoices />} /> */}
               {/* <Route path='/form' element={<Form />} /> */}
@@ -41,7 +39,8 @@ function App() {
               {/* <Route path='/calendar' element={<Calendar />} /> */}
             </Routes>
           </main>
-        </div>
+          </Box>
+        </Box>
       </ThemeProvider>
     </ColorModeContext.Provider>
   )
