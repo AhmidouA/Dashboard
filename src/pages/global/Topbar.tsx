@@ -32,7 +32,7 @@ const Topbar = () => {
   return (
     <Box display="flex" justifyContent="space-between" p={2}>
       {/* SEARCH BAR */}
-      <Box
+      <Box 
         display="flex"
         bgcolor={colors.primary[400]}
         borderRadius="3px"
@@ -65,5 +65,6 @@ const Topbar = () => {
     </Box>
   );
 };
+
 
 export default Topbar;
