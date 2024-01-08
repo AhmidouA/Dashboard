@@ -1,3 +1,4 @@
+/* https://github.com/plouc/nivo/blob/master/website/src/data/components/geo/world_countries.json?short_path=f03ddc9  */
 export const geoFeatures = {
     type: "FeatureCollection",
     features: [
