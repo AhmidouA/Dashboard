@@ -14,6 +14,7 @@ import Team from '@/pages/Team'
 import Contacts from '@/pages/Contacts';
 import Invoices from '@/pages/Invoices';
 import Form from '@/pages/Form';
+import Calendar from '@/pages/Calendar';
 
 
 function App() {
@@ -42,7 +43,7 @@ function App() {
               {/* <Route path='/line' element={<Line />} /> */}
               {/* <Route path='/faq' element={<FAQ />} /> */}
               {/* <Route path='/geography' element={<Geography />} /> */}
-              {/* <Route path='/calendar' element={<Calendar />} /> */}
+              <Route path='/calendar' element={<Calendar />} />
             </Routes>
           </main>
           </Box>
