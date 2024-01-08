@@ -4,6 +4,9 @@ import { Routes, Route } from 'react-router-dom';
 
 /* Components */
 import { ColorModeContext, useMode } from '@/hooks/theme';
+import { ExtendedTheme } from '@/shared/types';
+
+
 import Topbar from '@/hooks/Topbar';
 import Sidebar from '@/hooks/Sidebar';
 import Dashboard from '@/pages/Dashboard';
@@ -19,7 +22,7 @@ function App() {
 
   return (
    
-    <ColorModeContext.Provider value={colorMode}>
+    <ColorModeContext.Provider value={colorMode as ExtendedTheme}>
     <ThemeProvider theme={theme as Partial<Theme>}>
         <CssBaseline />
         {/* Ameliore le Css et l'adpate a tous els navigateur */}
