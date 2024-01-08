@@ -1,6 +1,6 @@
 /* REACT & NPM */
 import { Box, useTheme, Typography } from '@mui/material';
-import { DataGrid, GridColDef, GridToolbar } from '@mui/x-data-grid';
+import { DataGrid, GridColDef } from '@mui/x-data-grid';
 
 
 
